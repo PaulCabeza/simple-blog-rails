@@ -1,9 +1,11 @@
 <h1>Hello, Rails!</h1>
 
 <ul>
-    <% @articles.each do |article| %>
-      <li>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="/articles/<%= article.id %>">
         <%= article.title %>
-      </li>
-    <% end %>
-  </ul>
+      </a>
+    </li>
+  <% end %>
+</ul>
