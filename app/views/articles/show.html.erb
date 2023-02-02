@@ -1,19 +1,19 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
-
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-</ul>
-
-<ul>
-    <li><%= link_to "Destroy", article_path(@article), method: :delete, data: {
-        confirm: "Are you sure?"
-    } %></li>
-</ul>
-
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<br>
+<div class="card">
+    <div class="card-header">
+      Article
+    </div>
+    <div class="card-body">
+        <br>
+      <h2 class="card-title"><%= @article.title %></h2>
+      <p class="card-text"><%= @article.body %></p>
+      <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary" %> &nbsp;
+      <%= link_to "Destroy", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-danger" %>
+      <br><br><br>
+      <h4>Comments</h4>
+      <%= render @article.comments %>
+      
+      <%= render 'comments/form' %>
+      
+    </div>
+  </div>

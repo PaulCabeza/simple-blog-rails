@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # get "/articles/:id", to: "articles#show"
   resources :articles do
     resources :comments
-  end
+  end 
 
 end

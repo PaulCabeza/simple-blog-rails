@@ -1,13 +1,10 @@
 <%= form_with model: [@article, @article.comments.build] do |form| %>
-<p>
-    <%= form.label :commenter %> <br>
-    <%= form.text_field :commenter %>
-</p>
-<p>
-    <%= form.label :body %> <br>
-    <%= form.text_area :body %>
-</p>
-<p>
-    <%= form.submit %>
-</p>
+<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Add a comment:</div>
+    <div class="card-body">      
+      <p class="card-text"><%= form.label :commenter %> <br> <%= form.text_field :commenter %></p>
+      <p class="card-text"><%= form.label :body %> <br> <%= form.text_area :body %></p>
+      <%= form.submit class:"btn btn-light" %>
+    </div>
+  </div>
 <% end %>
